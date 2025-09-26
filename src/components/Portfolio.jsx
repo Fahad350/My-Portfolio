@@ -1,6 +1,6 @@
 import React from "react";
 
-import game from "../../public/react-game.png";
+import note from "../../public/NoteKeeper.png";
 
 import fyp from "../../public/fyp.png";
 import restaurant from "../../public/Resturant.png";
@@ -57,18 +57,18 @@ function Portfolio() {
     },
     {
       id: 6,
-      logo: game,
-      name: "Game in React",
-      title: " Tic Tac Toe Game in React JS",
-      detail: "Game involves creating components, managin game state",
-      link: "https://github.com/Fahad350/React",
+      logo: note,
+      name: "Notes",
+      title: " Note Keeping App in MERN",
+      detail: "In this app we used CRUD Operations",
+      link: "https://github.com/Fahad350/NoteKeepingApp",
       link1: "https://www.google.com/",
     },
   ];
   return (
     <div
       name="Portfolio"
-      className="bg-[url('/portfolio1.jpg')] bg-no-repeat bg-center bg-cover text-white "
+      className="bg-[url('/portfolio1.png')] bg-no-repeat bg-center bg-cover text-white "
     >
       <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
         <br />
