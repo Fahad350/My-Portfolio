@@ -53,7 +53,7 @@ function Home() {
             {/* social media icons */}
             <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 justify-between items-center">
               <div className="space-y-2 ">
-                <h4 className="font-bold text-cyan-600 ">Available On</h4>
+                <h4 className="font-bold text-cyan-600 ml-3 ">Available On</h4>
                 <ul className="flex space-x-2">
                   <li>
                     <a

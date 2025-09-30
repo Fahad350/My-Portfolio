@@ -14,7 +14,7 @@ function About() {
         </h1>
 
         {/* Intro Section */}
-        <p className="text-lg text-center text-gray-700 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg text-justify text-gray-700 leading-relaxed max-w-3xl mx-auto">
           Hello 👋, I'm a passionate{" "}
           <span className="font-semibold">Web Developer</span> with a strong
           focus on the <span className="text-blue-500">MERN stack</span>. With a
@@ -24,9 +24,9 @@ function About() {
 
         {/* Education Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-90 gap-15 mt-12 items-center">
-          <div className="space-y-3">
+          <div className="space-y-3 text-justify">
             <h2 className="text-2xl font-bold text-blue-600 text-center  md:mr-25 sm:mr-0   ">
-              🎓 Education
+              Education
             </h2>
             <h3 className="font-semibold">
               Virtual University of Pakistan{" "}
@@ -54,7 +54,7 @@ function About() {
         {/* Skills Section */}
         <div className="mt-12 ">
           <h2 className="text-2xl font-bold text-blue-600 mb-4 text-center">
-            ⚡ Skills & Expertise
+            Skills & Expertise
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 text-justify">
             {" "}
@@ -90,7 +90,7 @@ function About() {
         {/* Mission Section */}
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-blue-600 mb-4 text-center">
-            🚀 Mission Statement
+            Mission Statement
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed text-justify">
             My mission is to leverage my skills and creativity to deliver

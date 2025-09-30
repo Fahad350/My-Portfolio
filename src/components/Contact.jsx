@@ -46,7 +46,7 @@ function Contact() {
             <label className="px-4 ml-3 ">Full Name</label>
             <br />
             <input
-              className="bg-white text-black rounded h-8 md:w-70 sm:60 ml-7 px-2"
+              className="bg-white text-black rounded h-8 md:w-70 sm:40 ml-7 px-2"
               type="text"
               placeholder="Your Name"
               name="user_name"
@@ -56,7 +56,7 @@ function Contact() {
             <label className="px-4 ml-3">Email Address</label>
             <br />
             <input
-              className="bg-white text-black rounded h-8 md:w-70 sm:60 ml-7 px-2"
+              className="bg-white text-black rounded h-8 md:w-70 sm:40 ml-7 px-2"
               type="email"
               placeholder="Your Email"
               name="user_email"
