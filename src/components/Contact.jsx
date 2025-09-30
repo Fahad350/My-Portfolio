@@ -36,43 +36,39 @@ function Contact() {
           <form
             ref={form}
             onSubmit={sendEmail}
-            className="text-white bg-cyan-800 md:w-90 h-110 w-80 text-justify rounded-xl"
+            className="text-white bg-cyan-800 max-w-md w-full text-justify rounded-xl p-6"
           >
-            <h1 className="font-bold text-2xl text-black text-center mt-5">
+            <h1 className="font-bold text-2xl text-black text-center mb-5">
               Send Your Message
             </h1>
-            <br />
 
-            <label className="px-4 ml-3 ">Full Name</label>
-            <br />
+            <label className="block text-left">Full Name</label>
             <input
-              className="bg-white text-black rounded h-8 md:w-70 sm:40 ml-7 px-2"
+              className="bg-white text-black rounded h-10 w-full px-2"
               type="text"
               placeholder="Your Name"
               name="user_name"
             />
             <br />
             <br />
-            <label className="px-4 ml-3">Email Address</label>
-            <br />
+
+            <label className="block text-left">Email Address</label>
             <input
-              className="bg-white text-black rounded h-8 md:w-70 sm:40 ml-7 px-2"
+              className="bg-white text-black rounded h-10 w-full px-2"
               type="email"
               placeholder="Your Email"
               name="user_email"
             />
             <br />
             <br />
-            <label htmlFor="" className="px-4 ml-3">
-              Message
-            </label>
-            <br />
+
+            <label className="block text-left">Message</label>
             <textarea
-              className="bg-white text-black rounded h-20 md:w-70 sm:60 w-55 ml-7 px-2"
+              className="bg-white text-black rounded h-24 w-full px-2"
               placeholder="Your Message"
               name="message"
             />
-            <button className="bg-black hover:bg-green-500 text-white px-4 py-1 rounded cursor-pointer md:ml-20 ml-16 md:w-50 w-40 md:h-13 h-16 mt-5">
+            <button className="bg-black hover:bg-green-500 text-white px-4 py-2 rounded cursor-pointer w-full mt-5">
               Send Message
             </button>
           </form>
