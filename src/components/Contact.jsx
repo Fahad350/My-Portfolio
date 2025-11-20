@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
@@ -22,6 +23,11 @@ function Contact() {
       );
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div
       name="Contact"
@@ -29,14 +35,28 @@ function Contact() {
     >
       <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
         <br />
-        <h1 className="font-bold text-4xl text-blue-400">Contact Form</h1>
+        <motion.h1
+          className="font-bold text-4xl text-blue-400"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeInUp}
+          transition={{ duration: 0.8 }}
+        >
+          Contact Form
+        </motion.h1>
         <br />
 
         <div className="flex items-center justify-center">
-          <form
+          <motion.form
             ref={form}
             onSubmit={sendEmail}
             className="text-white bg-cyan-800 max-w-md w-full text-justify rounded-xl p-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeInUp}
+            transition={{ duration: 1, delay: 0.2 }}
           >
             <h1 className="font-bold text-2xl text-black text-center mb-5">
               Send Your Message
@@ -71,7 +91,7 @@ function Contact() {
             <button className="bg-black hover:bg-green-500 text-white px-4 py-2 rounded cursor-pointer w-full mt-5">
               Send Message
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
       <br />

@@ -1,7 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import note from "../../public/NoteKeeper.png";
-
 import fyp from "../../public/fyp.png";
 import restaurant from "../../public/Resturant.png";
 import hospital from "../../public/Hospital-App.png";
@@ -65,66 +65,81 @@ function Portfolio() {
       link1: "https://www.google.com/",
     },
   ];
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div
       name="Portfolio"
-      className="bg-[url('/portfolio1.png')] bg-no-repeat bg-center bg-cover text-white "
+      className="bg-[url('/portfolio1.png')] bg-no-repeat bg-center bg-cover text-white"
     >
       <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
         <br />
-        <h1 className="font-bold text-4xl text-green-500 text-center">
+        <motion.h1
+          className="font-bold text-4xl text-green-500 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeInUp}
+          transition={{ duration: 0.8 }}
+        >
           Portfolio
-        </h1>
+        </motion.h1>
         <br />
-        <span className="block text-2xl underline text-white font-semibold text-center">
-          Featured Porjects
-        </span>
+        <motion.span
+          className="block text-2xl underline text-white font-semibold text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={fadeInUp}
+          transition={{ duration: 1 }}
+        >
+          Featured Projects
+        </motion.span>
         <br />
 
         <div className="grid grid-cols-1 md:grid-cols-3 space-x-4 space-y-3 mt-4">
-          {cardItem.map(({ id, logo, name, title, detail, link, link1 }) => (
-            <div
-              key={id}
-              className="bg-blue-950  md:w-[340px] md:h-[350px] rounded-xl p-4 shadow-xl cursor-pointer hover:scale-110 duration-300"
-            >
-              <img
-                src={logo}
-                alt={name}
-                className="w-85 h-35 object-contain mb-4 block mx-auto "
-              />
-              <div>
-                <div className="font-bold text-lg text-center">{name}</div>
-                <div className="text-center">{title}</div>
-                <p className="text-sm text-gray-400 text-center">{detail}</p>
-              </div>
-
-              <div className="mt-4 space-x-2 flex justify-center">
-                <a
-                  key={id}
-                  href={link1}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-1 rounded cursor-pointer">
-                    Visit Website
-                  </button>
-                </a>
-                <a
-                  key={id}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="bg-green-700 hover:bg-green-500 text-white px-4 py-1 rounded cursor-pointer">
-                    Source Code
-                  </button>
-                </a>
-              </div>
-            </div>
-          ))}
+          {cardItem.map(
+            ({ id, logo, name, title, detail, link, link1 }, index) => (
+              <motion.div
+                key={id}
+                className="bg-blue-950 md:w-[340px] md:h-[350px] rounded-xl p-4 shadow-xl cursor-pointer hover:scale-110 duration-300"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeInUp}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <img
+                  src={logo}
+                  alt={name}
+                  className="w-85 h-35 object-contain mb-4 block mx-auto"
+                />
+                <div>
+                  <div className="font-bold text-lg text-center">{name}</div>
+                  <div className="text-center">{title}</div>
+                  <p className="text-sm text-gray-400 text-center">{detail}</p>
+                </div>
+                <div className="mt-4 space-x-2 flex justify-center">
+                  <a href={link1} target="_blank" rel="noopener noreferrer">
+                    <button className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-1 rounded cursor-pointer">
+                      Visit Website
+                    </button>
+                  </a>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    <button className="bg-green-700 hover:bg-green-500 text-white px-4 py-1 rounded cursor-pointer">
+                      Source Code
+                    </button>
+                  </a>
+                </div>
+              </motion.div>
+            )
+          )}
         </div>
       </div>
-
       <br />
     </div>
   );
