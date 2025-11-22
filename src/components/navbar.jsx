@@ -34,13 +34,16 @@ function Navbar() {
 
   return (
     <>
+      {/* Navbar */}
       <motion.div
-        className="max-w-screen-2xl container mx-auto px-12 md:px-20 h-18 shadow-md fixed top-0 left-0 right-0 bg-black text-white z-40"
+        className="w-full bg-[url('/nav.png')] bg-cover bg-center px-12 md:px-20 h-18 shadow-md fixed top-0 left-0 right-0 
+                   backdrop-blur-xl bg-white/10 border-t border-white/20 text-black z-40  "
         initial="hidden"
         animate="visible"
         variants={navbarVariant}
       >
         <div className="flex justify-between items-center h-18">
+          {/* Logo + Text */}
           <div className="flex space-x-3">
             <img
               src={pic}
@@ -61,6 +64,7 @@ function Navbar() {
             </a>
           </div>
 
+          {/* Desktop Menu */}
           <div>
             <motion.ul
               className="hidden md:flex space-x-8"
@@ -89,6 +93,7 @@ function Navbar() {
               ))}
             </motion.ul>
 
+            {/* Mobile Menu Button */}
             <div
               className="md:hidden hover:text-green-500 cursor-pointer"
               onClick={() => setMenu(!menu)}
@@ -99,10 +104,13 @@ function Navbar() {
         </div>
       </motion.div>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menu && (
           <motion.ul
-            className="md:hidden flex flex-col h-screen fixed top-0 left-0 text-white bg-black z-50 items-center justify-center space-y-4 text-xl"
+            className="md:hidden flex flex-col h-screen fixed top-0 left-0 w-64 px-6 py-12
+                        backdrop-blur-md bg-white/60 text-black
+ z-50 items-start space-y-6 text-xl"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -113,7 +121,6 @@ function Navbar() {
                 key={id}
                 className="hover:text-green-500 cursor-pointer font-semibold"
                 variants={menuItemVariant}
-                onClick={() => setMenu(false)}
               >
                 <Link
                   to={text}
@@ -121,6 +128,7 @@ function Navbar() {
                   duration={500}
                   offset={-70}
                   activeClass="active"
+                  onClick={() => setMenu(false)} // auto-close
                 >
                   {text}
                 </Link>

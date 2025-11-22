@@ -33,7 +33,7 @@ function Contact() {
       name="Contact"
       className="bg-[url('/about.jpg')] bg-cover bg-center text-center"
     >
-      <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
+      <div className="max-w-screen-2xl container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 my-0">
         <br />
         <motion.h1
           className="font-bold text-4xl text-blue-400"

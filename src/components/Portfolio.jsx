@@ -17,7 +17,7 @@ function Portfolio() {
       title: " Hospital Management Sytem",
       detail: "CRUD Application in Mern Stack with Admin Pannel",
       link: "https://github.com/Fahad350/HospitalApp",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function Portfolio() {
       title: "Book Store Application ",
       detail: "Mern Stack Application with Authentication and Authorization",
       link: "https://github.com/Fahad350/bookstore",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ function Portfolio() {
       title: "Gym Application ",
       detail: "Mern Stack Application with Authentication and Authorization",
       link: "https://github.com/Fahad350/Gym-Web",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ function Portfolio() {
       title: " Restaurant Application",
       detail: "Mern Stack Web Application With Reservation Feature",
       link: "https://github.com/Fahad350/Restaurant",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
     {
       id: 5,
@@ -53,7 +53,7 @@ function Portfolio() {
       title: " Elementory Education Mangement System ",
       detail: "CRUD Application in Php and Mysql",
       link: "https://github.com/Fahad350/FYP-in-php/blob/main/4%20Final%20Deliverable/bc190402608/EEMIS1-min.gif",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
     {
       id: 6,
@@ -62,7 +62,7 @@ function Portfolio() {
       title: " Note Keeping App in MERN",
       detail: "In this app we used CRUD Operations and States Manage",
       link: "https://github.com/Fahad350/NoteKeepingApp",
-      link1: "https://www.google.com/",
+      // link1: "https://www.google.com/",
     },
   ];
 
@@ -76,7 +76,7 @@ function Portfolio() {
       name="Portfolio"
       className="bg-[url('/portfolio1.png')] bg-no-repeat bg-center bg-cover text-white"
     >
-      <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
+      <div className="max-w-screen-2xl container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 my-0">
         <br />
         <motion.h1
           className="font-bold text-4xl text-green-500 text-center"

@@ -64,7 +64,6 @@ function Experience() {
     },
   ];
 
-  // Animation variant
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
@@ -72,7 +71,7 @@ function Experience() {
 
   return (
     <div name="Experience">
-      <div className="max-w-screen-2xl container mx-auto px-12 md:px-20 my-0">
+      <div className="max-w-screen-2xl container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 my-0">
         <br />
         <motion.h1
           className="font-bold text-4xl text-blue-400 text-center"
@@ -93,30 +92,34 @@ function Experience() {
           variants={fadeInUp}
           transition={{ duration: 1 }}
         >
-          I have a solid experiance in these technologies
+          I have solid experience in these technologies
         </motion.span>
         <br />
 
-        <div className="grid grid-cols-2 md:grid-cols-6 space-x-5 space-y-3 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-4 justify-items-center">
           {cardItem.map(({ id, logo, name, link }, index) => (
             <motion.a
               key={id}
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white md:w-[160px] md:h-[160px] w-[120px] h-[120px] md:space-x-1 sm:space-x-2.5 rounded-full px-10 md:py-2 shadow-xl cursor-pointer hover:scale-110 duration-300 flex flex-col items-center justify-center text-center"
+              className="bg-white rounded-full shadow-xl cursor-pointer hover:scale-110 duration-300 
+                         flex flex-col items-center justify-center text-center 
+                         w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 p-4"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
               variants={fadeInUp}
-              transition={{ duration: 0.6, delay: index * 0.1 }} // stagger effect
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <img
                 src={logo}
                 alt={name}
-                className="w-20 h-20 object-contain mb-2"
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 mb-2 object-contain"
               />
-              <div className="font-bold">{name}</div>
+              <div className="font-bold text-base sm:text-lg md:text-lg">
+                {name}
+              </div>
             </motion.a>
           ))}
         </div>
