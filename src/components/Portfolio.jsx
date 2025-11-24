@@ -74,7 +74,7 @@ function Portfolio() {
   return (
     <div
       name="Portfolio"
-      className="bg-[url('/portfolio1.png')] bg-no-repeat bg-center bg-cover text-white"
+      className="bg-[url('/portfolio.jpg')] bg-no-repeat bg-center bg-cover text-white"
     >
       <div className="max-w-screen-2xl container mx-auto px-4 sm:px-8 md:px-12 lg:px-20 my-0">
         <br />
