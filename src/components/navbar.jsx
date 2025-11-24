@@ -36,8 +36,8 @@ function Navbar() {
     <>
       {/* Navbar */}
       <motion.div
-        className="w-full bg-[url('/nav.png')] bg-cover bg-center px-12 md:px-20 h-18 shadow-md fixed top-0 left-0 right-0 
-                   backdrop-blur-xl bg-white/10 border-t border-white/20 text-black z-40  "
+        className="w-full bg-[url('/nav1.avif')] bg-cover bg-center px-12 md:px-20 h-18 shadow-md fixed top-0 left-0 right-0 
+                   backdrop-blur-2xl bg-white/10 border-t border-white/20 text-black z-40  "
         initial="hidden"
         animate="visible"
         variants={navbarVariant}
