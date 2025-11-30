@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pic from "../../public/Profile.jpeg";
+import pic from "../../public/nav1.jpeg";
 import { FiMenu } from "react-icons/fi";
 import { IoCloseCircle } from "react-icons/io5";
 import { Link } from "react-scroll";
@@ -45,11 +45,14 @@ function Navbar() {
         <div className="flex justify-between items-center h-18">
           {/* Logo + Text */}
           <div className="flex space-x-3">
-            <img
-              src={pic}
-              className="h-12 w-12 rounded-full hover:scale-110 duration-200 cursor-pointer"
-              alt=""
-            />
+            <div className="h-12 w-12 rounded-full cursor-pointer relative">
+              <img
+                src={pic}
+                className="h-full w-full rounded-full object-cover object-top transition-transform duration-300 hover:scale-150"
+                alt="profile"
+              />
+            </div>
+
             <a
               href="https://github.com/Fahad350"
               target="_blank"

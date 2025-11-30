@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import pic from "../../public/Profile.jpeg";
+import pic from "../../public/pro.jpeg";
 import {
   FaLinkedin,
   FaGithub,
@@ -162,11 +162,13 @@ function Home() {
           transition={{ duration: 1 }}
         >
           <a href="https://github.com/Fahad350" target="_blank">
-            <img
-              src={pic}
-              className="rounded-full md:w-[400px] md:h-[400px] w-[280px] h-[280px] hover:scale-110 duration-300"
-              alt=""
-            />
+            <div className="rounded-full overflow-hidden md:w-[400px] md:h-[400px] w-[280px] h-[280px]">
+              <img
+                src={pic}
+                className="w-full h-full object-cover object-top hover:scale-110 duration-300"
+                alt="profile"
+              />
+            </div>
           </a>
         </motion.div>
       </div>
